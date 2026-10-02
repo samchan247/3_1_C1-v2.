@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Two Fractions: Parallel Presentation from Numerical to Algebraic</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 10px;
+        }
+        .slide {
+            background: #fff;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid #3498db;
+        }
+        .slide-header {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .level {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .objective {
+            background-color: #f1f2f6;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .column {
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .linear {
+            background-color: #ebf5fb;
+            border-top: 4px solid #2980b9;
+        }
+        .literal {
+            background-color: #f4ecf7;
+            border-top: 4px solid #8e44ad;
+        }
+        .column h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .equation {
+            font-size: 1.1em;
+            background: rgba(255,255,255,0.85);
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 10px 0;
+            border: 1px solid #e2e8f0;
+        }
+        .steps {
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        .steps li {
+            margin-bottom: 10px;
+        }
+        .final-answer {
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 15px;
+            font-size: 1.05em;
+        }
+        .golden-rule {
+            background-color: #fef9e7;
+            border-left: 4px solid #f1c40f;
+            padding: 12px 15px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        math {
+            font-family: 'Cambria Math', 'STIX Two Math', 'Segoe UI', sans-serif;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Adding Two Fractions: Parallel Presentation (Numerical vs. Algebraic)</h1>
+
+    <!-- Slide 1 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 1: Fractions with Like Denominators</div>
+        <div class="level">Level 1</div>
+        <div class="objective"><strong>🎯 Objective:</strong> When the bottom numbers are the same, add the top numbers and keep the bottom number the same[cite: 1].</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Fractions</h3>
+                <p>Calculate:</p>
+                <div class="equation">
+                    <math><mfrac><mn>2</mn><mn>7</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>7</mn></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>The bottom numbers are the same (7)[cite: 1].</li>
+                    <li>Add the top numbers directly: <math><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mn>7</mn></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mn>5</mn><mn>7</mn></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mi>a</mi><mi>c</mi></mfrac><mo>+</mo><mfrac><mi>b</mi><mi>c</mi></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>The bottom numbers are the same (c)[cite: 1].</li>
+                    <li>Add the top numbers directly: <math><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mi>c</mi></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mi>c</mi></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> The bottom number acts like a label[cite: 1]. You can only add the top numbers when the labels match[cite: 1]!</div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 2: Fractions with Different Denominators</div>
+        <div class="level">Level 2</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Find a common bottom number by multiplying the bottom numbers together[cite: 1].</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Fractions</h3>
+                <p>Calculate:</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>5</mn></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Common bottom number is <math><mn>3</mn><mo>×</mo><mn>5</mn><mo>=</mo><mn>15</mn></math>[cite: 1].</li>
+                    <li>Change fractions: <math><mfrac><mrow><mn>1</mn><mo>×</mo><mn>5</mn></mrow><mn>15</mn></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow><mn>15</mn></mfrac></math>[cite: 1]</li>
+                    <li>Add top numbers: <math><mfrac><mrow><mn>5</mn><mo>+</mo><mn>6</mn></mrow><mn>15</mn></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mn>11</mn><mn>15</mn></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mi>a</mi></mfrac><mo>+</mo><mfrac><mn>1</mn><mi>b</mi></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Common bottom number is <math><mi>a</mi><mo>×</mo><mi>b</mi><mo>=</mo><mi>a</mi><mi>b</mi></math>[cite: 1].</li>
+                    <li>Change fractions: <math><mfrac><mi>b</mi><mrow><mi>a</mi><mi>b</mi></mrow></mfrac><mo>+</mo><mfrac><mi>a</mi><mrow><mi>a</mi><mi>b</mi></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Add top numbers: <math><mfrac><mrow><mi>b</mi><mo>+</mo><mi>a</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> When bottom numbers share no factors, multiply them together to make a common bottom number[cite: 1].</div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 3: General Fractions with Variable Numerators</div>
+        <div class="level">Level 3</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Use cross-multiplication to add any two fractions[cite: 1].</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Fractions</h3>
+                <p>Calculate:</p>
+                <div class="equation">
+                    <math><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>+</mo><mfrac><mn>4</mn><mn>5</mn></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Common bottom number is <math><mn>3</mn><mo>×</mo><mn>5</mn><mo>=</mo><mn>15</mn></math>[cite: 1].</li>
+                    <li>Cross-multiply: <math><mfrac><mrow><mn>2</mn><mo>×</mo><mn>5</mn></mrow><mn>15</mn></mfrac><mo>+</mo><mfrac><mrow><mn>4</mn><mo>×</mo><mn>3</mn></mrow><mn>15</mn></mfrac></math>[cite: 1]</li>
+                    <li>Add products: <math><mfrac><mrow><mn>10</mn><mo>+</mo><mn>12</mn></mrow><mn>15</mn></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mn>22</mn><mn>15</mn></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mi>x</mi><mi>a</mi></mfrac><mo>+</mo><mfrac><mi>y</mi><mi>b</mi></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Common bottom number is <math><mi>a</mi><mi>b</mi></math>[cite: 1].</li>
+                    <li>Cross-multiply: <math><mfrac><mrow><mi>x</mi><mo>×</mo><mi>b</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>y</mi><mo>×</mo><mi>a</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Add terms: <math><mfrac><mrow><mi>x</mi><mi>b</mi><mo>+</mo><mi>y</mi><mi>a</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>b</mi><mi>x</mi><mo>+</mo><mi>a</mi><mi>y</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> The general rule for adding fractions is: <math><mfrac><mi>A</mi><mi>B</mi></mfrac><mo>+</mo><mfrac><mi>C</mi><mi>D</mi></mfrac><mo>=</mo><mfrac><mrow><mi>A</mi><mi>D</mi><mo>+</mo><mi>B</mi><mi>C</mi></mrow><mrow><mi>B</mi><mi>D</mi></mrow></mfrac></math>[cite: 1].</div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 4: Polynomial Numerators (Expanding Brackets)</div>
+        <div class="level">Level 4</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Put brackets around top expressions and expand them after making a common denominator[cite: 1].</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Fractions</h3>
+                <p>Calculate:</p>
+                <div class="equation">
+                    <math><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo>+</mo><mfrac><mrow><mi>x</mi><mo>−</mo><mn>3</mn></mrow><mn>3</mn></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Common bottom number is <math><mn>2</mn><mo>×</mo><mn>3</mn><mo>=</mo><mn>6</mn></math>[cite: 1].</li>
+                    <li>Set up fractions: <math><mfrac><mrow><mn>3</mn><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>6</mn></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mn>6</mn></mfrac></math>[cite: 1]</li>
+                    <li>Expand brackets: <math><mfrac><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>6</mn></mrow><mn>6</mn></mfrac></math>[cite: 1]</li>
+                    <li>Combine like terms: <math><mfrac><mrow><mn>5</mn><mi>x</mi><mo>−</mo><mn>3</mn></mrow><mn>6</mn></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mn>5</mn><mi>x</mi><mo>−</mo><mn>3</mn></mrow><mn>6</mn></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow><mi>b</mi></mfrac><mo>+</mo><mfrac><mrow><mi>x</mi><mo>−</mo><mi>b</mi></mrow><mi>a</mi></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Common bottom number is <math><mi>a</mi><mi>b</mi></math>[cite: 1].</li>
+                    <li>Set up fractions: <math><mfrac><mrow><mi>a</mi><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>b</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Expand brackets: <math><mfrac><mrow><mi>a</mi><mi>x</mi><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Group terms: <math><mfrac><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>x</mi><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> If the top part has more than one term, put it inside brackets before cross-multiplying[cite: 1]!</div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 5: Adding a Whole Number to a Fraction</div>
+        <div class="level">Level 5</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Turn a whole number or single term into a fraction by placing it over 1[cite: 1].</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Fractions</h3>
+                <p>Calculate:</p>
+                <div class="equation">
+                    <math><mn>3</mn><mo>+</mo><mfrac><mn>2</mn><mn>5</mn></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Write 3 as <math><mfrac><mn>3</mn><mn>1</mn></mfrac></math>; common bottom number is 5[cite: 1].</li>
+                    <li>Change fraction: <math><mfrac><mrow><mn>3</mn><mo>×</mo><mn>5</mn></mrow><mn>5</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>=</mo><mfrac><mn>15</mn><mn>5</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>5</mn></mfrac></math>[cite: 1]</li>
+                    <li>Add top numbers: <math><mfrac><mrow><mn>15</mn><mo>+</mo><mn>2</mn></mrow><mn>5</mn></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mn>17</mn><mn>5</mn></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mi>x</mi><mo>+</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Write x as <math><mfrac><mi>x</mi><mn>1</mn></mfrac></math>; common bottom number is b[cite: 1].</li>
+                    <li>Change fraction: <math><mfrac><mrow><mi>x</mi><mo>×</mo><mi>b</mi></mrow><mi>b</mi></mfrac><mo>+</mo><mfrac><mi>a</mi><mi>b</mi></mfrac><mo>=</mo><mfrac><mrow><mi>b</mi><mi>x</mi></mrow><mi>b</mi></mfrac><mo>+</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></math>[cite: 1]</li>
+                    <li>Add top numbers: <math><mfrac><mrow><mn>15</mn><mo>+</mo><mn>2</mn></mrow><mn>5</mn></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>b</mi><mi>x</mi><mo>+</mo><mi>a</mi></mrow><mi>b</mi></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> You can write any whole term as a fraction by putting 1 under it[cite: 1].</div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 6: Denominators with Variables and Common Factors</div>
+        <div class="level">Level 6</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Find the Lowest Common Denominator (LCD) instead of multiplying the bottom numbers[cite: 1].</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Fractions</h3>
+                <p>Calculate:</p>
+                <div class="equation">
+                    <math><mfrac><mn>2</mn><mi>x</mi></mfrac><mo>+</mo><mfrac><mn>3</mn><mrow><mn>2</mn><mi>x</mi></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>The Lowest Common Denominator (LCD) is <math><mn>2</mn><mi>x</mi></math>[cite: 1].</li>
+                    <li>Multiply first fraction top and bottom by 2: <math><mfrac><mn>4</mn><mrow><mn>2</mn><mi>x</mi></mrow></mfrac><mo>+</mo><mfrac><mn>3</mn><mrow><mn>2</mn><mi>x</mi></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Add top numbers: <math><mfrac><mrow><mn>4</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>2</mn><mi>x</mi></mrow></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mn>7</mn><mrow><mn>2</mn><mi>x</mi></mrow></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mi>a</mi><mi>x</mi></mfrac><mo>+</mo><mfrac><mi>b</mi><mrow><mn>c</mn><mi>x</mi></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>The Lowest Common Denominator (LCD) is <math><mi>c</mi><mi>x</mi></math>[cite: 1].</li>
+                    <li>Multiply first fraction top and bottom by c: <math><mfrac><mrow><mi>a</mi><mi>c</mi></mrow><mrow><mi>c</mi><mi>x</mi></mrow></mfrac><mo>+</mo><mfrac><mi>b</mi><mrow><mi>c</mi><mi>x</mi></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Add top numbers: <math><mfrac><mrow><mi>a</mi><mi>c</mi><mo>+</mo><mi>b</mi></mrow><mrow><mi>c</mi><mi>x</mi></mrow></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>a</mi><mi>c</mi><mo>+</mo><mi>b</mi></mrow><mrow><mi>c</mi><mi>x</mi></mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> Always check if one bottom number fits into the other before multiplying them together[cite: 1].</div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 7: Binomial Denominators</div>
+        <div class="level">Level 7</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Treat expressions like (x + a) as single whole units[cite: 1].</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Fractions</h3>
+                <p>Calculate:</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Common bottom number is <math><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></math>[cite: 1].</li>
+                    <li>Cross-multiply: <math><mfrac><mrow><mn>1</mn><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Add top numbers: <math><mfrac><mrow><mi>x</mi><mo>+</mo><mn>3</mn><mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>3</mn></mrow></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mi>x</mi><mo>+</mo><mi>b</mi></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Common bottom number is <math><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></math>[cite: 1].</li>
+                    <li>Cross-multiply: <math><mfrac><mrow><mi>x</mi><mo>+</mo><mi>b</mi></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Add top numbers: <math><mfrac><mrow><mi>x</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>x</mi><mo>+</mo><mi>a</mi></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo><mi>x</mi><mo>+</mo><mi>a</mi><mi>b</mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> Keep two-term expressions wrapped in brackets so you don't break them apart[cite: 1].</div>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 8: Opposite Factors in Denominators</div>
+        <div class="level">Level 8</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Spot opposite terms like (x - y) and (y - x), then factor out -1 to simplify[cite: 1].</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Fractions</h3>
+                <p>Calculate:</p>
+                <div class="equation">
+                    <math><mfrac><mn>5</mn><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac><mo>+</mo><mfrac><mn>3</mn><mrow><mn>2</mn><mo>−</mo><mi>x</mi></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Note that <math><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></math>[cite: 1].</li>
+                    <li>Factor out -1: <math><mfrac><mn>3</mn><mrow><mn>2</mn><mo>−</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mo>−</mo><mfrac><mn>3</mn><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Rewrite: <math><mfrac><mn>5</mn><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac><mo>−</mo><mfrac><mn>3</mn><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Subtract top numbers: <math><mfrac><mrow><mn>5</mn><mo>−</mo><mn>3</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mn>2</mn><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mi>a</mi><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mi>b</mi><mrow><mi>y</mi><mo>−</mo><mi>x</mi></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Note that <math><mo stretchy="false">(</mo><mi>y</mi><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>y</mi><mo stretchy="false">)</mo></math>[cite: 1].</li>
+                    <li>Factor out -1: <math><mfrac><mi>b</mi><mrow><mi>y</mi><mo>−</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mo>−</mo><mfrac><mi>b</mi><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Rewrite: <math><mfrac><mi>a</mi><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>−</mo><mfrac><mi>b</mi><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></math>[cite: 1]</li>
+                    <li>Subtract top numbers: <math><mfrac><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></math>[cite: 1]</li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> Remember that <math><mo stretchy="false">(</mo><mi>b</mi><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo></math> is equal to <math><mo>−</mo><mo stretchy="false">(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></math>[cite: 1]. Factoring out -1 makes finding common bottom numbers easier[cite: 1]!</div>
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 9: Shared Linear Factors</div>
+        <div class="level">Level 9</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Find the common linear factor in a(mx - b) and c(mx - b) to get the LCD.</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Coefficients Example</h3>
+                <p>Calculate (for <math><mi>x</mi><mo>≠</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></math>):</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mrow><mn>2</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mn>5</mn><mrow><mn>3</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Identify shared factor (2x - 1) and numbers 2 and 3.</li>
+                    <li>The LCD is <math><mn>2</mn><mo>×</mo><mn>3</mn><mo>×</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>6</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></math>.</li>
+                    <li>Adjust top numbers: <math><mfrac><mn>3</mn><mrow><mn>6</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mn>10</mn><mrow><mn>6</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                    <li>Add top numbers: <math><mfrac><mrow><mn>3</mn><mo>+</mo><mn>10</mn></mrow><mrow><mn>6</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mn>13</mn><mrow><mn>6</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mrow><mi>a</mi><mo stretchy="false">(</mo><mi>m</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>m</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Identify shared factor (mx - b) and numbers a and c.</li>
+                    <li>The LCD is <math><mi>a</mi><mi>c</mi><mo stretchy="false">(</mo><mi>m</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></math>.</li>
+                    <li>Adjust top numbers: <math><mfrac><mi>c</mi><mrow><mi>a</mi><mi>c</mi><mo stretchy="false">(</mo><mi>m</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mi>a</mi><mrow><mi>a</mi><mi>c</mi><mo stretchy="false">(</mo><mi>m</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                    <li>Add top numbers: <math><mfrac><mrow><mi>c</mi><mo>+</mo><mi>a</mi></mrow><mrow><mi>a</mi><mi>c</mi><mo stretchy="false">(</mo><mi>m</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>a</mi><mo>+</mo><mi>c</mi></mrow><mrow><mi>a</mi><mi>c</mi><mo stretchy="false">(</mo><mi>m</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> Keep shared factors unchanged and only find the lowest common multiple of the outside numbers.</div>
+    </div>
+
+    <!-- Slide 10 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 10: Difference of Two Squares & Linear Denominators</div>
+        <div class="level">Level 10</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Factor (x² - a²) into (x - a)(x + a) to find the Lowest Common Denominator.</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Factors Example</h3>
+                <p>Calculate (for <math><mi>x</mi><mo>≠</mo><mo>±</mo><mn>3</mn></math>):</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>9</mn></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Factor second bottom term: <math><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>9</mn><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></math>.</li>
+                    <li>The LCD is <math><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></math>.</li>
+                    <li>Multiply first fraction top and bottom by (x - 3): <math><mfrac><mrow><mn>1</mn><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                    <li>Combine top numbers: <math><mfrac><mrow><mi>x</mi><mo>−</mo><mn>3</mn><mo>+</mo><mn>2</mn></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>9</mn></mrow></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow></mfrac><mo>+</mo><mfrac><mi>b</mi><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Factor second bottom term: <math><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>a</mi><mo stretchy="false">)</mo></math>.</li>
+                    <li>The LCD is <math><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>a</mi><mo stretchy="false">)</mo></math>.</li>
+                    <li>Multiply first fraction top and bottom by (x - a): <math><mfrac><mrow><mn>1</mn><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mi>b</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>a</mn><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                    <li>Combine top numbers: <math><mfrac><mrow><mi>x</mi><mo>−</mo><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>x</mi><mo>−</mo><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup></mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> The difference of two squares (x² - a²) already contains the factor (x + a).</div>
+    </div>
+
+    <!-- Slide 11 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 11: Difference of Squares (a²x² - b²) with Positive Linear (max + mb)</div>
+        <div class="level">Level 11</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Factor both (a²x² - b²) = (ax - b)(ax + b) and (max + mb) = m(ax + b) to find the LCD.</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Factors Example</h3>
+                <p>Calculate (for <math><mi>x</mi><mo>≠</mo><mo>±</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></math>):</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mrow><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>9</mn></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mrow><mn>6</mn><mi>x</mi><mo>+</mo><mn>9</mn></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Factor bottom terms: <math><mo stretchy="false">(</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>9</mn><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></math> and <math><mo stretchy="false">(</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>9</mn><mo stretchy="false">)</mo><mo>=</mo><mn>3</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></math>.</li>
+                    <li>The LCD is <math><mn>3</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></math>.</li>
+                    <li>Adjust top numbers: <math><mfrac><mn>3</mn><mrow><mn>3</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                    <li>Expand and add: <math><mfrac><mrow><mn>3</mn><mo>+</mo><mn>4</mn><mi>x</mi><mo>−</mo><mn>6</mn></mrow><mrow><mn>3</mn><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mn>4</mn><mi>x</mi><mo>−</mo><mn>3</mn></mrow><mrow><mn>3</mn><mo stretchy="false">(</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>9</mn><mo stretchy="false">)</mo></mrow></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mrow><msup><mi>a</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>+</mo><mi>m</mi><mi>b</mi></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Factor bottom terms: <math><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></math> and <math><mi>m</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></math>.</li>
+                    <li>The LCD is <math><mi>m</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></math>.</li>
+                    <li>Adjust top numbers: <math><mfrac><mi>m</mi><mrow><mi>m</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi></mrow><mrow><mi>m</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                    <li>Combine top numbers: <math><mfrac><mrow><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo>+</mo><mi>m</mi></mrow><mrow><mi>m</mi><mo stretchy="false">(</mo><msup><mi>a</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo>+</mo><mi>m</mi></mrow><mrow><mi>m</mi><mo stretchy="false">(</mo><msup><mi>a</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> Factor out both the difference of squares and common numbers first to find the shared factor (ax + b).</div>
+    </div>
+
+    <!-- Slide 12 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 12: Difference of Squares (a²x² - b²) with Negative Linear (max - mb)</div>
+        <div class="level">Level 12</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Factor both (a²x² - b²) = (ax - b)(ax + b) and (max - mb) = m(ax - b) to find the LCD.</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Factors Example</h3>
+                <p>Calculate (for <math><mi>x</mi><mo>≠</mo><mo>±</mo><mfrac><mn>5</mn><mn>3</mn></mfrac></math>):</p>
+                <div class="equation">
+                    <math><mfrac><mn>2</mn><mrow><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>25</mn></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mn>6</mn><mi>x</mi><mo>−</mo><mn>10</mn></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Factor bottom terms: <math><mo stretchy="false">(</mo><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>25</mn><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>5</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>5</mn><mo stretchy="false">)</mo></math> and <math><mo stretchy="false">(</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>10</mn><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>5</mn><mo stretchy="false">)</mo></math>.</li>
+                    <li>The LCD is <math><mn>2</mn><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>5</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>5</mn><mo stretchy="false">)</mo></math>.</li>
+                    <li>Adjust top numbers: <math><mfrac><mrow><mn>2</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>5</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>5</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                    <li>Expand and add: <math><mfrac><mrow><mn>4</mn><mo>+</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mrow><mn>2</mn><mo stretchy="false">(</mo><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>25</mn><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>9</mn></mrow><mrow><mn>2</mn><mo stretchy="false">(</mo><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>25</mn><mo stretchy="false">)</mo></mrow></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mrow><msup><mi>a</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>−</mo><mi>m</mi><mi>b</mi></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Factor bottom terms: <math><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></math> and <math><mi>m</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></math>.</li>
+                    <li>The LCD is <math><mi>m</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></math>.</li>
+                    <li>Adjust top numbers: <math><mfrac><mi>m</mi><mrow><mi>m</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi></mrow><mrow><mi>m</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                    <li>Combine top numbers: <math><mfrac><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>m</mi></mrow><mrow><mi>m</mi><mo stretchy="false">(</mo><msup><mi>a</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mfrac></math></li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>m</mi></mrow><mrow><mi>m</mi><mo stretchy="false">(</mo><msup><mi>a</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> Match (ax - b) with (max - mb) by factoring out m. The common factor (ax - b) appears once in the LCD.</div>
+    </div>
+
+    <!-- Slide 13 -->
+    <div class="slide">
+        <div class="slide-header">📊 Slide 13: Perfect Squares (ax ± b)² with Scaled Linear Denominators</div>
+        <div class="level">Level 13</div>
+        <div class="objective"><strong>🎯 Objective:</strong> Factor perfect squares (a²x² ± 2abx + b²) = (ax ± b)² and find the LCD when combined with m(ax ± b).</div>
+        <div class="grid">
+            <div class="column linear">
+                <h3>🟢 Numerical Factors Example</h3>
+                <p>Calculate (for <math><mi>x</mi><mo>≠</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></math>):</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><mrow><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>12</mn><mi>x</mi><mo>+</mo><mn>4</mn></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mrow><mn>6</mn><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Factor bottom terms: <math><mo stretchy="false">(</mo><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>12</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo stretchy="false">)</mo><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math> and <math><mo stretchy="false">(</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></math>.</li>
+                    <li>The LCD is <math><mn>2</mn><msup><mrow><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math>.</li>
+                    <li>Adjust top numbers: <math><mfrac><mrow><mn>1</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><msup><mrow><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><msup><mrow><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></math></li>
+                    <li>Expand and add: <math><mfrac><mrow><mn>2</mn><mo>+</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>4</mn></mrow><mrow><mn>2</mn><msup><mrow><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>6</mn><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mrow><mn>2</mn><msup><mrow><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></math></li>
+                    <li>Simplify by dividing factor of 2: <math><mfrac><mrow><mn>2</mn><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><msup><mrow><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></math></li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><msup><mrow><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></math></div>
+            </div>
+            <div class="column literal">
+                <h3>🔵 Algebraic Fractions</h3>
+                <p>Simplify:</p>
+                <div class="equation">
+                    <math><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mo><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>+</mo><mi>m</mi><mi>b</mi></mrow></mfrac></math>
+                </div>
+                <ul class="steps">
+                    <li>Factor bottom terms: <math><msup><mrow><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math> and <math><mi>m</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></math>.</li>
+                    <li>The LCD takes the highest power of the common factor: <math><mi>m</mi><msup><mrow><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math>.</li>
+                    <li>Adjust top numbers: <math><mfrac><mi>m</mi><mrow><mi>m</mi><msup><mrow><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi></mrow><mrow><mi>m</mi><msup><mrow><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></math></li>
+                    <li>Combine top numbers: <math><mfrac><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>m</mi></mrow><mrow><mi>m</mi><msup><mrow><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></math></li>
+                </ul>
+                <div class="final-answer">Final Answer: <math><mfrac><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>m</mi></mrow><mrow><mi>m</mi><msup><mrow><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></math></div>
+            </div>
+        </div>
+        <div class="golden-rule"><strong>💡 Golden Rule:</strong> For repeated factors like (ax + b)², always use the highest power when making the Lowest Common Denominator.</div>
+    </div>
+
+</body>
+</html>
